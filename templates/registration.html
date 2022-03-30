@@ -1,0 +1,57 @@
+{% load static %}
+
+<html lang="en">
+<head>
+
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/bootstrap.min.css' %}">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/font-awesome.css' %}">
+
+    <link rel="stylesheet" href="{% static 'assets/css/templatemo-training-studio.css' %}">
+
+
+    <meta charset="UTF-8">
+    <title>Registration</title>
+</head>
+<body>
+<font color="white">
+<form action="{% url 'home:registration' %}" method="post">
+    {% csrf_token %}
+<section class="section" id="schedule">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 offset-lg-3">
+                <div class="section-heading dark-bg">
+                    <h2>Become A<em> Member</em></h2>
+                    <img src="{% static 'assets/images/line-dec.png' %}" alt="waves"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 offset-lg-3">
+
+                Name: <input type="text" name="name" placeholder="Enter your name" style="border: inset;"
+                             required><br><br>
+                Place: <input type="text" name="place" placeholder="Enter your place" style="border: inset;"
+                              required><br><br>
+                Age: <input type="number" name="age" placeholder="Enter your age" style="border: inset;"
+                            required><br><br>
+                Phone No: <input type="number" name="ph" placeholder="Enter your ph-No" style="border: inset;" required><br><br>
+                Height: <input type="number" name="height" placeholder="Enter your height" style="border: inset;"
+                               required><br><br>
+                Weight: <input type="number" name="weight" placeholder="Enter your weight" style="border: inset;"
+                               required><br><br>
+                <input type="submit" value="submit" style="border: outset;">
+
+
+            </div>
+        </div>
+    </div>
+</section>
+</form>
+
+    </font>
+</body>
+</html>
